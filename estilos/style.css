@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Great+Vibes&family=Indie+Flower&family=Lobster&family=Lobster+Two:ital@1&family=Moon+Dance&family=Open+Sans:wght@300;400&family=Oswald:wght@200&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;0,800;0,900;1,900&family=Roboto:wght@100;300;400&family=Sintony&family=Source+Sans+Pro&family=Staatliches&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 4em;
+  position: fixed;
+  z-index: 10;
+  font-family: "Lobster Two", cursive;
+  color: white;
+}
+header img {
+  display: none;
+}
+header h5 {
+  font-size: 25px;
+}
+header ul {
+  display: flex;
+}
+header ul a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  font-size: 20px;
+}
+header ul a:not(:last-child) {
+  margin-right: 30px;
+}
+header ul a li {
+  list-style: none;
+}
+header ul a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 5;
+  width: 100%;
+  height: 3px;
+  background-color: #6cda0c;
+  z-index: 3;
+  transition: 0.5s ease-out;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #85D83B;
+}
+section::before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(25, 185, 221, 0.3);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+}
+section video {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: circle(0% at 50%);
+          clip-path: circle(0% at 50%);
+  z-index: 1;
+}
+section video.active {
+  display: block;
+  -webkit-clip-path: circle(150% at 50% 50%);
+          clip-path: circle(150% at 50% 50%);
+  transition-property: -webkit-clip-path;
+  transition-property: clip-path;
+  transition-property: clip-path, -webkit-clip-path;
+  transition: 1.7s;
+}
+section article {
+  width: 50%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  z-index: 3;
+  color: white;
+  display: none;
+}
+section article h1, section article p {
+  text-shadow: 5px 0 10px black;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+section article h1 {
+  font-size: 45px;
+  font-family: "Lobster Two", cursive;
+}
+section article.active {
+  display: block;
+  display: flex;
+}
+section .points {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: 5em;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+section .points .circle {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px;
+}
+section .points .circle:not(:last-child) {
+  margin-right: 15px;
+}
+section .points .circle.active {
+  background-color: #85D83B;
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    padding: 20px 22px;
+  }
+  header img {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  header ul {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #6cda0c;
+    z-index: -1;
+    text-align: center;
+    gap: 25px;
+    transition: 0.5s;
+  }
+  header ul a:not(:last-child) {
+    margin-right: 0;
+  }
+  header ul a:hover::after {
+    display: none;
+  }
+  header ul a.active {
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+  header ul a.active::after {
+    display: none;
+  }
+  header ul.active {
+    left: 0;
+  }
+  section article {
+    width: 100%;
+    padding: 0 25px;
+  }
+  section article h1 {
+    font-size: 30px;
+  }
+  section article p {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */
