@@ -1,4 +1,177 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Great+Vibes&family=Indie+Flower&family=Lobster&family=Lobster+Two:ital@1&family=Moon+Dance&family=Open+Sans:wght@300;400&family=Oswald:wght@200&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;0,800;0,900;1,900&family=Roboto:wght@100;300;400&family=Sintony&family=Source+Sans+Pro&family=Staatliches&display=swap");
+.section2 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../recursos/primavera.jpg");
+  background-size: cover;
+  display: flex;
+}
+.section2 article {
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 30px;
+  color: white;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  text-align: center;
+}
+.section2 article h2 {
+  font-family: "Lobster Two", cursive;
+  font-size: 45px;
+}
+.section2 article p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  .section2 article {
+    width: 100%;
+    height: 50%;
+    padding: 0 25px;
+  }
+  .section2 article h2 {
+    font-size: 30px;
+  }
+  .section2 article p {
+    font-size: 15px;
+  }
+}
+.section3 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../recursos/verano.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.section3 article {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 30px;
+  color: white;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+.section3 article h2 {
+  font-family: "Lobster Two", cursive;
+  font-size: 45px;
+}
+.section3 article p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  .section3 article {
+    width: 100%;
+    height: 50%;
+    padding: 0 25px;
+  }
+  .section3 article h2 {
+    font-size: 30px;
+  }
+  .section3 article p {
+    font-size: 15px;
+  }
+}
+.section4 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../recursos/otoño.jpg");
+  background-size: cover;
+  display: flex;
+}
+.section4 article {
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 30px;
+  color: white;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  text-align: center;
+}
+.section4 article h2 {
+  font-family: "Lobster Two", cursive;
+  font-size: 45px;
+}
+.section4 article p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  .section4 article {
+    width: 100%;
+    height: 50%;
+    padding: 0 25px;
+  }
+  .section4 article h2 {
+    font-size: 30px;
+  }
+  .section4 article p {
+    font-size: 15px;
+  }
+}
+.section5 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../recursos/invierno.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.section5 article {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 30px;
+  color: white;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+.section5 article h2 {
+  font-family: "Lobster Two", cursive;
+  font-size: 45px;
+}
+.section5 article p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  .section5 article {
+    width: 100%;
+    height: 50%;
+    padding: 0 25px;
+  }
+  .section5 article h2 {
+    font-size: 30px;
+  }
+  .section5 article p {
+    font-size: 15px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +222,12 @@ header ul a.active::after {
   transition: 0.5s ease-out;
 }
 
-section {
+header.sticky {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+
+.section1 {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -59,7 +237,7 @@ section {
   overflow: hidden;
   background-color: #85D83B;
 }
-section::before {
+.section1::before {
   content: "";
   width: 100%;
   height: 100vh;
@@ -69,7 +247,7 @@ section::before {
   position: absolute;
   z-index: 2;
 }
-section video {
+.section1 video {
   position: absolute;
   top: 0;
   height: 0;
@@ -81,7 +259,7 @@ section video {
           clip-path: circle(0% at 50%);
   z-index: 1;
 }
-section video.active {
+.section1 video.active {
   display: block;
   -webkit-clip-path: circle(150% at 50% 50%);
           clip-path: circle(150% at 50% 50%);
@@ -90,7 +268,7 @@ section video.active {
   transition-property: clip-path, -webkit-clip-path;
   transition: 1.7s;
 }
-section article {
+.section1 article {
   width: 50%;
   height: 35%;
   display: flex;
@@ -103,20 +281,20 @@ section article {
   color: white;
   display: none;
 }
-section article h1, section article p {
+.section1 article h1, .section1 article p {
   text-shadow: 5px 0 10px black;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
 }
-section article h1 {
+.section1 article h1 {
   font-size: 45px;
   font-family: "Lobster Two", cursive;
 }
-section article.active {
+.section1 article.active {
   display: block;
   display: flex;
 }
-section .points {
+.section1 .points {
   width: 100%;
   height: 20px;
   position: absolute;
@@ -125,7 +303,7 @@ section .points {
   justify-content: center;
   z-index: 5;
 }
-section .points .circle {
+.section1 .points .circle {
   width: 15px;
   height: 15px;
   background-color: white;
@@ -133,10 +311,10 @@ section .points .circle {
   cursor: pointer;
   box-shadow: 0 0 10px;
 }
-section .points .circle:not(:last-child) {
+.section1 .points .circle:not(:last-child) {
   margin-right: 15px;
 }
-section .points .circle.active {
+.section1 .points .circle.active {
   background-color: #85D83B;
 }
 
@@ -182,14 +360,14 @@ section .points .circle.active {
   header ul.active {
     left: 0;
   }
-  section article {
+  .section1 article {
     width: 100%;
     padding: 0 25px;
   }
-  section article h1 {
+  .section1 article h1 {
     font-size: 30px;
   }
-  section article p {
+  .section1 article p {
     font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

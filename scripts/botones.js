@@ -35,9 +35,13 @@ circle.forEach((btn, i)=>{
 let Headers = (active)=>{
     options.forEach(btn=>{
         btn.classList.remove('active')
+
     })
 
     options[active].classList.add('active')
+    list.classList.remove('active')
+    icon.classList.remove('open')
+    icon.src = 'recursos/hamburguer.png'
 }
 
 options.forEach((btn,i)=>{
@@ -55,3 +59,4 @@ icon.addEventListener('click', ()=>{
         icon.src = 'recursos/hamburguer.png'
     }
 })
+
